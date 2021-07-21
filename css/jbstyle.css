@@ -1,0 +1,224 @@
+img.img-responsive{
+	box-shadow: 0 4px 8px 0px rgb(0 0 0 / 20%), 0 6px 19px 0 rgb(0 0 0 / 30%);
+    background: white;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    z-index: -2;
+}
+.navbar-brand{
+	width: 100%;
+	height: 50%;
+	padding: 2px 2px;
+	margin: auto;
+	box-shadow: 0px 5px 9px #000000, 0px 4px 9px darkgreen;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+    animation-direction: reverse;   
+
+}
+@keyframes example {
+    0%   {background-color:red; 
+    		left:200px;
+    		top:0px;
+            transform: rotate(20deg);
+         }
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:0px; top:0px;}
+    75%  {background-color:green; left:0px; top:0px;}
+    100% {background-color:red; left:200px; top:0px;
+     transform: rotate(-20deg);}
+}
+.fafa{
+	margin: 10px;
+	display: block;
+	font-size: 20px;
+	margin-top: 20px;
+}
+.me{
+		display: inline-flex;		
+box-shadow: 0 4px 8px 0px rgb(0 0 0 / 20%), 0 6px 19px 0 rgb(0 0 0 / 30%);
+    background: white;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    width: 100%;
+    padding: 10px;
+    font-size: 50px;
+		font-weight: 200;
+		justify-content: center;
+		position: relative;
+	}
+	.me .mstatic{
+		color: #fff;
+		font-size: 60px;
+		font-weight: 200;
+
+	}
+	.me .mtext{
+		margin-left:5px;
+		text-align: center;
+	}
+	.me .mtext li{
+		color: #fc6060;
+		list-style: none;
+		font-size: 60px;
+		font-weight: 500;
+
+	}
+	 .mtext li span{
+		position: relative;
+	}
+	 .mtext li span::after{
+		content: "";
+		position: absolute;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		border-left: 2px solid #fc6060;
+		animation: typing 1.5s steps(10), blink 3s ease-in-out 10s infinite;
+
+	}
+	@keyframes typing{
+		100%{
+			left: 100%;
+			/*margin: 0 -35px 0 35px;*/
+		}
+	}
+
+.Profile{
+	padding: 15px;
+}
+.container{
+ border-bottom: 2px solid white;
+    text-align: center;
+    background: #f8f8f8;
+    padding: 16px;
+}
+
+
+p.title strong{
+    font-weight: bold;
+    font-family: "roboto", sans-serif;
+    font-size: xx-large;
+}
+div.inf span{
+	font-size: x-large;
+    margin-left: 10px;
+    color: lightseagreen;
+}
+.inf{
+    padding: 20px;
+}
+
+
+/*p.anim::after {
+    letter-spacing: 1.2rem;
+    font-size: 2rem;
+    font-weight: 400;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 5s steps(13) blink 1s ease-in-out 8s infinite;
+    border-left: 3px solid white; 
+    width: 27ch;
+    position: absolute;
+    left: 0px;
+    content: "";
+    color: white;
+}
+@keyframes typing {
+    100%{
+    	left: 100%;
+    	margin: 0 -35px 0 35px}
+    
+    }*/
+/*.borders{
+	border: solid 5px #fc5185;
+	transition: border-width 0.6s linear;
+}
+.borders:hover{vh
+	border-width: 10px;
+}*/
+/*.borders{
+	outline: solid 1px #fc5185;
+	transition: border-width 0.6s linear;
+}
+.borders:hover{
+	outline: 10px;
+}
+.boxs{
+	width: 100%;
+	height: 50%;
+	background: linear-gradient(90deg, #f90 var(--pos, 0%), #444 0) 50%/ 5em;
+	animation: blinds .85s ease-in-out infinite alternate;
+}
+@keyframes blinds{
+	to{--pos:100%;}
+}*/
+.boxs{
+	display: flex;
+	justify-content: center;
+	align-items: center;min-height: 100vh;
+	background: #252839;
+/*}
+.anim{
+	    position: relative;
+    font-size: 14vw;
+    color: #d4d7e6;
+    -webkit-text-stroke: 0.3vw #981f3b;
+    text-transform: uppercase;
+    border-right: 2px solid #981f3b;
+}
+.anim ::before{
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	color: yellow;
+	-webkit-text-stroke:0vw #981f3b;
+	border-right: 2px solid #981f3b;
+	overflow: hidden;
+	animation: animate 6s linear infinite;*/
+
+}
+@keyframes animate{
+	0%{
+		width: 0;
+	}
+	70%{
+		width: 100%;
+	}
+}
+
+.dynamic-text{
+	position: relative;
+	background: #343545;
+	font-size: 60px;
+	font-weight: 500;
+	text-align: center;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+
+
+}
+/*p.d_text::after{
+	content: "";
+	color:  #fc6060;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	border-left: 2px solid   #fc6060;
+	animation:  typings 1.5s steps(8) infinite;
+
+}
+
+@keyframes  typings{
+	100%{
+		left: 100%;
+	}
+}*/

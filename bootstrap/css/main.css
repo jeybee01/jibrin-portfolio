@@ -1,0 +1,56 @@
+div.center_container{
+	/*display: flex;*/
+}
+div.left_content {
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 15px;
+    margin: 15px auto;
+}	
+div.about-content {
+    margin: auto;
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}	
+div.about-content img {
+    width: 50%;
+    height: auto;
+}
+div.about-text {
+    padding: 10px;
+    text-align: center;
+    font-size: 35px;
+    overflow: hidden;
+}
+@media screen and (max-width:677px){
+	div.about-text {
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+} 
+.myname {
+      text-shadow: 2px 2px 2px #e6aa4152;
+    color: grey;
+}
+div.about-content1 {
+    margin: auto;
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+div.right-content{
+	 margin: 15px auto;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   padding: 15px;
+}
+footer{
+	 margin: 15px auto;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 15px;
+   /* justify-content: center;
+    text-align: center;*/
+}
