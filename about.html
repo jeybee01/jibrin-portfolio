@@ -1,156 +1,351 @@
-<html><head><title> Jibrin Ahamadu</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,500,500italic,700,900">
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
- <link rel="stylesheet" href="css/font-awesome.css">
- 
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jibrin Ahamadu|Portfolio</title>
+    <!-- <link rel="stylesheet" href="stylesheet/main.css"> -->
+    <!-- <link rel="stylesheet" href="stylesheet/homestyle.css"> -->
+    <link rel="stylesheet" href="stylesheet/font-awesome.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,500,500italic,700,900">
+    <link rel="stylesheet" href="css/font-awesome.css">
+</head>
 <style>
-.cvpreview  {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 4px;
-  width: 150px;
-}
-.cvpreview:hover  {
-width: 100%;
-}
-/*.profile {
-  padding: 4px;
-  border: 4px solid white;
-
-}*/
-html,body,h1,h2,h3,h4,h5,h6 {
-/*font-family: "Roboto", sans-serif;
-*/    margin: 0;
+    *{
+    margin: 0;
     padding: 0;
-    box-sizing: border-box;} 
-abbr {
-  text-decoration: none;
+        box-sizing: border-box;
+    }
+    .navbar {
+width: 100%;
+padding: 5px;
+overflow: auto;
+background-color: #000;
 }
 
-.wantleft {
-  display: inline;
-  float: left;
+.navbar a {
+padding: 10px;
+text-decoration: none;
+font-size: 20px;
+color: #818181;
+display: block;
 }
- /* -----This the begging of the modal image ------ */
-#myImg, #myimg2, #myimg3, #myimg4, #myimg5 {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+a.jblogo{
+color: #fff;
+font-size: 30px;
+padding: 5px;
+}
+a.jblogo span{
+color: #f4511e;
+font-weight: bold;
+}
+.navbar .jblogo{
+    float: left;
+} 
+.navbar .ul{
+    float: right;
+}
+.navbar .ul a{
+    float: left;
+}
+#main a.jblogo {
+padding: 10px;
+text-decoration: none;
+font-size: 25px;
+color: #000;
+display: block;
+transition: 0.3s;
 }
 
-#myImg:hover, #myimg2:hover, #myimg3:hover, #myimg4:hover, #myimg5:hover {opacity: 0.7;}
-
-.profilehr hr{
-  margin: 0px;
+.navbar a:hover{
+color: #f1f1f1;
+}
+/* .navbar a.home:hover{
+    color: red;
+} */
+#main{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+/*sidenav*/
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #111;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
 }
 
-/*/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+text-align: center;
+color: #818181;
+display: block;
+transition: 0.3s;
 }
 
+.sidenav a:hover {
+color: #f1f1f1;
+}
 
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+.sidenav{
+box-shadow: 10px 10px rgba(0,0,0,0.4);
+}
+.about-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+}
+ 
+.info-box{
+    width: 20%;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.info-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+.info-box .jb-desc {
+    padding: 15px;
+    text-align: center;
+}
+.about-content{
+    width: 30%;
+    text-align: left;
+    overflow: hidden;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 1.2;
+}
+.about-content a{
+    color: #f4511e;
+    text-decoration: none;
+}
+.skills-section{
+    width: 90%;
+    padding: 20px;
+}
+.skills-box{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    line-height: 1.2;
+}
+.progress {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  margin-bottom: 10px;
+}
+.progress-bar {
+  position: absolute;
+  width: 1%;
+  height: 100%;
+  font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+  background-color: #428bca;
+}
+
+.education-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.education-section .edu-exp{
+    width: 60%;
+    padding: 30px;
+    font-size: 20px;
+    line-height: 1.2;
+}
+.education-section .certificate-container{
+    padding: 25px;
+    line-height: 1.2;
+}
+.certificate-container .cert-info{
+    padding: 5px;
+    margin-top: 5px;
+}
+.cert-info h5{
+    font-size: 20px;
+}
+.certificate-container img{
+    width: 100%;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #111;
+    color: #818181;
+     text-align: center;
+}
+.footer a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+text-align: center;
+color: #818181;
+display: inline-block;
+transition: 0.3s;
+}
+@media screen and (max-width: 500px) {
+    .navbar{
+display: none;
+}
+.education-section{
+    display: inline-block;
+}
+.info-box, .about-content{
+  width: 80%;
+  margin: auto;
+}
+.about-section{
+  display: inline-block;
+}
+
+ .footer{
+     display: block;
+ }
+
+}
+@media screen and (min-width: 700px) {
+#main{
+    display: none;
+}
+}
+ 
 </style>
-</head><body class="w3-light-grey">
-
-<!-- Page Container -->
-<div class=container" style=" max-width:100%; padding: 20px;">
-
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="left_content">
+<body>
     
-      <div class="center_container">
-        <div class="about-content">
-          <img src="images/jb.jpg" style="width:100%" alt="Avatar" class="">
-          <div class="about-text">
-            <h2 class="myname">Jibrin Ahamadu</h2>
-          </div>
+        <header class="header-section">
+        <div id="navbar" class="navbar">
+            <a href="#" class="jblogo"><span>J</span>B</a>
+            <div class="ul">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
         </div>
-        <div class="about-content1">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right"></i>Backend End Developer </p>
-          <p><i class="fa fa-map-marker fa-fw w3-margin-right"></i>Taraba, Nigeria</p>
-          <p><i class="fa fa-envelope  fa-fw w3-margin-right"></i><a href="" target="_blank">jibrinmuazu14@gmail.com</a></p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right "></i> <a href="tel:+2347069264010">08163962322</a></p>
-          <hr>
+          </div>
+    
+    <div id="mySidenav" class="sidenav">
+     
+      <a href="index.html" class="home">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
 
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right "></i>Skills</b></p>
-          <p>HTML</p>
-          <div class="progress">
-         <div class="progress-bar " role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">90%</div>
-          </div>
-          <p>CSS</p>
-           <div class="progress">
-         <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">70%</div>
-          </div>
-          <p>JavaScript</p>
-           <div class="progress">
-         <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:30%">30%</div>
-          </div>
-          <p>Photoshop</p>
-           <div class="progress">
-         <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">70%</div>
-          </div>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+    
+    <div id="main">
+      <span style="font-size:30px;cursor:pointer; margin-left: 10px;" onclick="openNav()">&#9776;</span>
+      <a href="#" class="jblogo"><span>J</span>B</a>
+    </div>
+</header>
 
-          <p>Microsoft Powerpoint</p>
-          <div class="progress">
-         <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:80%">80%</div>
-          </div>
-          <p>Microsoft Excel</p>
-          <div class="progress">
-         <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%">50%</div>
-          </div>
-          <p>Microsoft Word</p>
-          <div class="progress">
-         <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">90%</div>
-          </div>
-          <br>
 
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-          <p>English</p>
-           <div class="progress">
-         <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">90%</div>
-          </div>
-          <p>Hausa</p>
-          <div class="progress">
-         <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">90%</div>
-          </div>
-          <p>Jukun</p>
-          <div class="progress">
-         <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">90%</div>
-          </div>
-            <br>
+<div class="about-section">
+    <div class="info-box about-box">
+            <img src="./images/jb.jpg" alt="jb" width="50" height="50">
+        <div class="jb-desc">
+            <h3>Jibrin Ahamadu</h3>
         </div>
-        </div><br>
-
-    <!-- End Left Column -->
+    </div>
+    <div class="about-content about-box">
+        <p><i class="fa fa-briefcase fa-fw "></i>Backend End Developer </p>
+        <p><i class="fa fa-map-marker fa-fw"></i>Taraba, Nigeria</p>
+        <p><i class="fa fa-envelope  fa-fw"></i> <a href="" target="_blank">jibrinmuazu14@gmail.com</a></p>
+        <p><i class="fa fa-linkedin  fa-fw "></i> <a href="" target="_blank">Linkedin</a></p>
+        <p><i class="fa fa-github  fa-fw"></i> <a href="" target="_blank">Github</a></p>
+        <p><i class="fa fa-phone fa-fw"></i> <a href="tel:+2348163962322">08163962322</a></p>
     </div>
 
-    <!-- Right Column -->
-    <div class="container right-content">
+        </div><br>
     
-        <div class="twothird">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <div class="skills-section">
+        <div class="skills-box">
+            <h3><b><i class="fa fa-asterisk  "></i>Skills</b></h3>
+              <p>HTML</p>
+              <div class="progress">
+             <div class="progress-bar " style="width:90%">90%</div>
+              </div>
+              <p>CSS</p>
+               <div class="progress">
+             <div class="progress-bar"  style="width:70%">70%</div>
+              </div>
+              <p>JavaScript</p>
+               <div class="progress">
+             <div class="progress-bar"  style="width:30%">30%</div>
+              </div>
+              <p>Photoshop</p>
+               <div class="progress">
+             <div class="progress-bar"  style="width:70%">70%</div>
+              </div>
+    
+              <p>Microsoft Powerpoint</p>
+              <div class="progress">
+             <div class="progress-bar"  style="width:80%">80%</div>
+              </div>
+              <p>Microsoft Excel</p>
+              <div class="progress">
+             <div class="progress-bar"  style="width:50%">50%</div>
+              </div>
+              <p>Microsoft Word</p>
+              <div class="progress">
+             <div class="progress-bar"  style="width:90%">90%</div>
+              </div>
+              <br>
+    
+              <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+              <p>English</p>
+               <div class="progress">
+             <div class="progress-bar"   style="width:90%">90%</div>
+              </div>
+              <p>Hausa</p>
+              <div class="progress">
+             <div class="progress-bar" style="width:90%">90%</div>
+              </div>
+              <p>Jukun</p>
+              <div class="progress">
+             <div class="progress-bar"  style="width:90%">90%</div>
+              </div>
+                <br>
+            </div>   
+        </div>
+        
+
+
+<div class="education-section">
+    <div class="edu-exp">
+        <h2 class="edu-head"><i class="fa fa-graduation-cap fa-fw"></i>Education</h2>
         <div class="w3-container">
             <h5 class="w3-opacity"><b>Front End Developer / w3schools.com</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i>From Jan 2016 - <span class="w3-tag w3-teal w3-round">Date</span></h6>
+            <h6><i class="fa fa-calendar-alt fa-fw "></i>From Jan 2016 - <span class="fa fa-tag">Date</span></h6>
             <p> <a href="https://www.w3schools.com" target="_blank">W3schools.com</a> is the world's largest web Developer site. It comprises lots of programming languages, frameworks, library, examples, exercises and more. I was introduced to this site in the year 2019 and since then i have been learning and acquiring new skills some of which are:- </p>
               <ul>
               <li>HTML</li>
@@ -158,7 +353,8 @@ abbr {
               <li>HTML5</li></ol>
               <li>CSS3</li>
               <ol>
-                <li>Vanilla CSS</li><li>W3CSS</li>
+                <li>Vanilla CSS</li>
+                <li>W3CSS</li>
               <li>BOOTSTRAP4</li></ol>
               <li>JavaScript</li>
                   </ul>
@@ -167,72 +363,82 @@ abbr {
             </div>
             <div class="container">
             <h5 class="w3-opacity"><b>B.Tech Computer & communication Engineering / <abbr title="Abubakar Tafawa Balewa University, Bauchi">ATBU</abbr></b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i> 2013 - Mar 2019</h6>
+          <h6 ><i class="fa fa-calendar-alt fa-fw "></i> 2013 - Mar 2019</h6>
           <p>Abubakar Tafawa Balewa University Bauchi, is one of the five technology university in Nigeria. I was admitted into the university where I studied <strong>Computer & communication Engineering</strong> and graduated with a 2<sup>nd</sup> class degree.</p>
           <hr>
         </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>One Year / <abbr title="National Youth Service Corps">NYSC</abbr></b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i>Jun 2019 - May 2020</h6>
+        <div class="container">
+          <h5><b>One Year / <abbr title="National Youth Service Corps">NYSC</abbr></b></h5>
+          <h6><i class="fa fa-calendar-alt fa-fw "></i>March 2020- Feb 2021</h6>
           <p>I did my one year mandatory service to my father's land at Ministry of Women Affairs Community and Social development in Oshimili South(Asaba) local goverment area of Delta state. I keep/manage record's of data at the Department of research and statistic, for the period of my service year.</p><br>
         </div>
       </div>
 
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Earned Certificates</h2>
-       <!--  <div class="w3-container">
-          <h5 class="w3-opacity"><b>IT Related Certificates</b></h5>
-          <div class="wantleft"><h6 class="w3-text-teal"><i class="fa fa-briefcase fa-fw w3-margin-right"></i>Google digital skills for Africa|</h6>
-          <img id="myImg" src="./assert/gdsa.jpeg" alt="Google digital skills for Africa" width="150" height="100">
-        </div>
+      <div class="certificate-container">
+        <h2 class="cert-head"><i class="fa fa-certificate fa-fw"></i>Earned Certificates</h2>
 
-          <div class="wantleft"><h6 class="w3-text-teal"><i class="fa fa-briefcase fa-fw w3-margin-right"></i>Grasshopper by Google</h6>
-          <img id="myimg2" src="./assert/Grasshopper (4).png" alt="Grasshopper Mobile App by Google" width="150" height="100">
-        </div>
-        <div class="wantleft">
-          <h6 class="w3-text-teal"><i class="fa fa-briefcase fa-fw w3-margin-right"></i>programmingHub</h6>
-          <img id="myimg3" src="./assert/programmingHubJS.jpg" alt="programmingHub JavaScript" width="150" height="100">
-          </div>
-        </div> -->
-        <div class="w3-container">
-          <h5 class="w3-opacity"><i class="fa fa-briefcase fa-fw w3-margin-right"></i><b>NYCS Certificates</b></h5> 
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2020 - 2021</h6>
-          <img id="myimg4" src="assert/nyscpic.jpeg" alt="NYCS Certificate" width="150" height="100">
+        <div class="cert-info">
+          <h5><i class="fa fa-briefcase fa-fw "></i><b>NYCS Certificates</b></h5> 
+          <h6><i class="fa fa-calendar fa-fw"></i>2020 - 2021</h6>
+          <img id="nysc" src="./images/nysc.jpg" alt="NYCS Certificate" width="150" height="100">
           <hr>
           </div>
-      </div>
 
+          <div class="cert-info">
+            <h5><i class="fa fa-briefcase fa-fw "></i><b>CDS Certificates</b></h5> 
+            <h6><i class="fa fa-calendar fa-fw"></i>2020 - 2021</h6>
+            <img id="cds" src="./images/cds.jpg" alt="cds" width="150" height="100">
+            <hr>
+            </div>
 
+            <div class="cert-info">
+                <h5><i class="fa fa-briefcase fa-fw "></i><b>Nuesa Certificates</b></h5> 
+                <h6><i class="fa fa-calendar fa-fw"></i>2018 - 2019</h6>
+                <img id="nuesa" src="./images/nuesa.jpg" alt="nuesa" width="150" height="100">
+                <hr>
+                </div>
 
-      <div class="w3-container w3-card w3-white">
-          <h2 class="w3-text-grey w3-padding-16 w3-margin-top"><i class="fa fa-user fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Personal Profile</h2>
-          <div class="w3-container profilehr">
-            <h6 class="w3-opacity"><b>Date of birth : </b> 14/ 04 /1994</h6><hr>
-            <h6 class="w3-opacity"><b>State of origin : </b> Taraba state</h6><hr>
-            <h6 class="w3-opacity"><b>Marital Status : </b> Single</h6><hr>
-            <h6 class="w3-opacity"><b>Nationality : </b> Nigerian</h6><hr>
-            <h6 class="w3-opacity"><b>Hobby : </b> Programming, travelling, reading &amp; playing PS </h6><hr>
-          </div>
-            
-          </div>
-          
-        </div>
-  
-    <!-- End Right Column -->
+          <div class="cert-info">
+            <h2><i class="fa fa-user fa-fw"></i>Personal Profile</h2>
+            <div class="personal-info">
+              <h6><b>Date of birth : </b> 14/ 04 /1994</h6><hr>
+              <h6><b>State of origin : </b> Taraba state</h6><hr>
+              <h6><b>Marital Status : </b> Single</h6><hr>
+              <h6><b>Nationality : </b> Nigerian</h6><hr>
+              <h6><b>Hobby : </b> Programming, travelling, reading &amp; playing PS </h6><hr>
+            </div>
     </div>
-
-  <!-- End Grid -->
-  </div>
-  
-  <!-- End Page Container -->
+      </div>
+</div>
 
 
-<footer class="w3-container w3-teal w3-center w3-margin-top">
-  <p>Find me on social media.</p>
-  <a href="#" target="_blank"><i class="fa fa-facebook w3-hover-opacity"></i></a>
-  <a href="#" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-  <a href="#" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
-  <a href="#" target="_blank"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>
-</footer>
 
-</body></html>
+<footer class="footer">
+    <p>copyright &copy;: Tiidelab 2021</p>
+    <div class="social">
+        <p>Find me on social media.</p>
+    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="#" target="_blank"> <i class="fa fa-linkedin"></i></a>
+    </div>
+    
+  </footer>
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.opacity= "rgba(0,0,0,0.2)";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            document.body.style.backgroundColor = "white";
+        }
+        </script>
+    
+</body>
+</html>

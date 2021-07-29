@@ -18,9 +18,6 @@ background-color: black;
 width: 100%;
 padding: 5px;
 overflow: auto;
-display: flex;
-justify-content: space-between;
-
 }
 
 .navbar a {
@@ -36,8 +33,17 @@ font-size: 30px;
 padding: 5px;
 }
 a.jblogo span{
-color: coral;
+color: #f4511e;
 font-weight: bold;
+}
+.navbar .jblogo{
+    float: left;
+} 
+.navbar .ul{
+    float: right;
+}
+.navbar .ul a{
+    float: left;
 }
 #main a.jblogo {
 padding: 10px;
@@ -48,9 +54,12 @@ display: block;
 transition: 0.3s;
 }
 
-.navbar a:hover {
+.navbar a:hover{
 color: #f1f1f1;
 }
+/* .navbar a.home:hover{
+    color: red;
+} */
 #main{
 display: flex;
 justify-content: space-between;
@@ -74,6 +83,7 @@ padding-top: 60px;
 padding: 8px 8px 8px 32px;
 text-decoration: none;
 font-size: 25px;
+text-align: center;
 color: #818181;
 display: block;
 transition: 0.3s;
@@ -102,14 +112,14 @@ width: 100%;
 height: 100%;
 background: url(../images/home.jpg) no-repeat center center/cover;
 overflow: hidden;
-padding-top: 60px;
+padding: 106px;
 }
 .wrapper{ 
 display: inline-flex;
 }
 .wrapper .static-text{
 color: #fff;
-font-size: 40px;
+font-size: 65px;
 font-weight: bold;
 margin-right: 15px;
 }
@@ -123,7 +133,7 @@ overflow: hidden;
 list-style: none;
 font-size: 40px;
 font-weight: bold;
-color: coral;
+color: #f4511e;
 }
 
 .wrapper ul li span{
@@ -149,18 +159,44 @@ animation: typing 8s steps(19) infinite;
 
 .content-section p{
 padding: 10px;
+line-height: 1.2;
 }
 a.btn{
-display: inline-block;
-text-decoration: none;
-background-color: whitesmoke;
-color: steelblue;
-padding: 10px;
-margin-left: 10px;
-font-size: 18px;
-cursor: pointer;
-border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: #f4511e;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 15px;
+  width: 206px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
+a.btn span{
+    cursor: pointer;
+  /* display: inline-block; */
+  position: relative;
+  transition: 0.5s
+}
+a.btn span::after{
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+a.btn:hover span {
+    padding-right: 25px;
+  }
+  a.btn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
 
 @media screen and (max-width:500px) {
 .wrapper{
@@ -172,6 +208,14 @@ font-size: 21px;
 .navbar{
 display: none;
 }
+.content-section{
+    padding:0px;
+    padding-top: 60px;
+}
+.wrapper .static-text{
+    font-size: 40px;
+}
+
 }
 @media screen and (min-width:700px) {
 .wrapper{

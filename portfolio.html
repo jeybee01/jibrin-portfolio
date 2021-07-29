@@ -7,97 +7,283 @@
     <title>Jibrin Ahamadu|Portfolio</title>
 </head>
 <style>
-    *{
-        margin: 0;
-        padding: 0;
+   *{
+    margin: 0;
+    padding: 0;
         box-sizing: border-box;
     }
-    html,body{
+    html, body{
         height: 100%;
     }
-    .container{
-        display: grid;
-    grid-template-columns: repeat(3, 4fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    padding: 10px;
-    }
-    
-    .box{
-        width: 100%;
-        overflow: hidden;
-        padding: 10px;
-      box-shadow: 0px 16px 20px 0px rgb(0 0 0 / 40%);
+    .navbar {
+width: 100%;
+padding: 5px;
+overflow: auto;
+background-color: #000;
 }
-    
-    @media screen and (max-width: 500px) {
-        .container{
-            display: block;
-        }
-    }
 
+.navbar a {
+padding: 10px;
+text-decoration: none;
+font-size: 20px;
+color: #818181;
+display: block;
+}
+a.jblogo{
+color: #fff;
+font-size: 30px;
+padding: 5px;
+}
+a.jblogo span{
+color: #f4511e;
+font-weight: bold;
+}
+.navbar .jblogo{
+    float: left;
+} 
+.navbar .ul{
+    float: right;
+}
+.navbar .ul a{
+    float: left;
+}
+#main a.jblogo {
+padding: 10px;
+text-decoration: none;
+font-size: 25px;
+color: #000;
+display: block;
+transition: 0.3s;
+}
+
+.navbar a:hover{
+color: #f1f1f1;
+}
+/* .navbar a.home:hover{
+    color: red;
+} */
+#main{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+/*sidenav*/
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #111;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+text-align: center;
+color: #818181;
+display: block;
+transition: 0.3s;
+}
+
+.sidenav a:hover {
+color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+.sidenav{
+box-shadow: 10px 10px rgba(0,0,0,0.4);
+}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #111;
+    color: #818181;
+     text-align: center;
+}
+.footer a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+text-align: center;
+color: #818181;
+display: inline-block;
+transition: 0.3s;
+}
+
+.portfolio-section{
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-column-gap: 10px;
+}
+
+div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    border-radius: 25px;
+}	
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+.portfolio-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+strong {
+    font-weight: 700;
+}
+
+
+@media screen and (max-width: 500px) {
+    .navbar{
+display: none;
+}
+.education-section{
+    display: inline-block;
+}
+ .footer{
+     display: block;
+ }
+
+}
+@media screen and (min-width: 700px) {
+#main{
+    display: none;
+}
+}
 </style>
 <body>
-    <div class="container">
-    
-        <div class="box">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-        <div class="w3-container">
-            <h5 class="w3-opacity"><b>Front End Developer / w3schools.com</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i>From Jan 2016 - <span class="w3-tag w3-teal w3-round">Date</span></h6>
-            <p> <a href="https://www.w3schools.com" target="_blank">W3schools.com</a> is the world's largest web Developer site. It comprises lots of programming languages, frameworks, library, examples, exercises and more. I was introduced to this site in the year 2019 and since then i have been learning and acquiring new skills some of which are:- </p>
-              <ul>
-              <li>HTML</li>
-              <ol><li>HTML4</li>
-              <li>HTML5</li></ol>
-              <li>CSS3</li>
-              <ol>
-                <li>Vanilla CSS</li><li>W3CSS</li>
-              <li>BOOTSTRAP4</li></ol>
-              <li>JavaScript</li>
-                  </ul>
-              <p>This resume is powered by w3.css, HTML5 and Vanilla JavaScript.</p>
-            <hr>
-            </div>
-            <div class="container">
-            <h5 class="w3-opacity"><b>B.Tech Computer & communication Engineering / <abbr title="Abubakar Tafawa Balewa University, Bauchi">ATBU</abbr></b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i> 2013 - Mar 2019</h6>
-          <p>Abubakar Tafawa Balewa University Bauchi, is one of the five technology university in Nigeria. I was admitted into the university where I studied <strong>Computer & communication Engineering</strong> and graduated with a 2<sup>nd</sup> class degree.</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>One Year / <abbr title="National Youth Service Corps">NYSC</abbr></b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i>Jun 2019 - May 2020</h6>
-          <p>I did my one year mandatory service to my father's land at Ministry of Women Affairs Community and Social development in Oshimili South(Asaba) local goverment area of Delta state. I keep/manage record's of data at the Department of research and statistic, for the period of my service year.</p><br>
-        </div>
+  <header class="header-section">
+    <div id="navbar" class="navbar">
+        <a href="#" class="jblogo"><span>J</span>B</a>
+        <div class="ul">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </div>
       </div>
 
-      <div class="box">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Earned Certificates</h2>
-    
-        <div class="w3-container">
-          <h5 class="w3-opacity"><i class="fa fa-briefcase fa-fw w3-margin-right"></i><b>NYCS Certificates</b></h5> 
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2020 - 2021</h6>
-          <img id="myimg4" src="assert/nyscpic.jpeg" alt="NYCS Certificate" width="150" height="100">
-          <hr>
-          </div>
-      </div>
+<div id="mySidenav" class="sidenav">
+ 
+  <a href="index.html" class="home">Home</a>
+  <a href="about.html">About</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer; margin-left: 10px;" onclick="openNav()">&#9776;</span>
+  <a href="#" class="jblogo"><span>J</span>B</a>
+</div>
+</header>
 
 
 
-      <div class="box">
-          <h2 class="w3-text-grey w3-padding-16 w3-margin-top"><i class="fa fa-user fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Personal Profile</h2>
-          <div class="w3-container profilehr">
-            <h6 class="w3-opacity"><b>Date of birth : </b> 14/ 04 /1994</h6><hr>
-            <h6 class="w3-opacity"><b>State of origin : </b> Taraba state</h6><hr>
-            <h6 class="w3-opacity"><b>Marital Status : </b> Single</h6><hr>
-            <h6 class="w3-opacity"><b>Nationality : </b> Nigerian</h6><hr>
-            <h6 class="w3-opacity"><b>Hobby : </b> Programming, travelling, reading &amp; playing PS </h6><hr>
-          </div>
-            
-          </div>
-          
-        </div>
+<div class="portfolio-container">
+  <div class="desc"><h2 class="portfolio-title">My <strong>Portfolio</strong></h2></div>
+
+<div class="portfolio-section">
+  
+  <div class="img">
+    <a target="_blank" href="img_fjords.jpg">
+      <img src="./images/muawiya.jpg" alt="Trolltunga Norway" width="300" height="200">
+    </a>
+    <div class="desc">A Collection logo</div>
+  </div>
+  
+  <div class="img">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="./images/jbcamera.JPG" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Brains and Shooters</div>
+  </div>
+  
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="./images/jcs1.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+  
+  <div class="img">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="./images/mdd.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Md Studio</div>
+  </div>
+  <div class="img">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="./images/jb.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">jeybee Brand</div>
+  </div>
+
+  <div class="img">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="./images/jb2.JPG" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">My Love for Pixel</div>
+  </div>
+
+</div>
+</div>
+
+
+
+<footer class="footer">
+  <p>copyright &copy;: Tiidelab 2021</p>
+  <div class="social">
+      <p>Find me on social media.</p>
+  <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+  <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+  <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+  <a href="#" target="_blank"> <i class="fa fa-linkedin"></i></a>
+  </div>
+  
+</footer>
+<script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.body.style.opacity= "rgba(0,0,0,0.2)";
+  }
+  
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.body.style.backgroundColor = "white";
+  }
+  </script>
   
 </body>
 </html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jibrin Ahamadu|Portfolio</title>
+    <!-- <link rel="stylesheet" href="stylesheet/main.css"> -->
+    <!-- <link rel="stylesheet" href="stylesheet/homestyle.css"> -->
+    <link rel="stylesheet" href="stylesheet/font-awesome.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,500,500italic,700,900">
+    <link rel="stylesheet" href="css/font-awesome.css">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+        box-sizing: border-box;
+    }
+    html, body{
+        height: 100%;
+    }
+    .navbar {
+width: 100%;
+padding: 5px;
+overflow: auto;
+background-color: #000;
+}
+
+.navbar a {
+padding: 10px;
+text-decoration: none;
+font-size: 20px;
+color: #818181;
+display: block;
+}
+a.jblogo{
+color: #fff;
+font-size: 30px;
+padding: 5px;
+}
+a.jblogo span{
+color: #f4511e;
+font-weight: bold;
+}
+.navbar .jblogo{
+    float: left;
+} 
+.navbar .ul{
+    float: right;
+}
+.navbar .ul a{
+    float: left;
+}
+#main a.jblogo {
+padding: 10px;
+text-decoration: none;
+font-size: 25px;
+color: #000;
+display: block;
+transition: 0.3s;
+}
+
+.navbar a:hover{
+color: #f1f1f1;
+}
+/* .navbar a.home:hover{
+    color: red;
+} */
+#main{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+/*sidenav*/
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #111;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+text-align: center;
+color: #818181;
+display: block;
+transition: 0.3s;
+}
+
+.sidenav a:hover {
+color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+.sidenav{
+box-shadow: 10px 10px rgba(0,0,0,0.4);
+}
+.about-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+}
+ 
+.info-box{
+    width: 20%;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.info-box img {
+    width: 100%;
+    height: auto;
+}
+.info-box .jb-desc {
+    padding: 15px;
+    text-align: center;
+}
+.about-content{
+    width: 30%;
+    text-align: left;
+    overflow: hidden;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 1.2;
+}
+.about-content a{
+    color: #f4511e;
+    text-decoration: none;
+}
+.skills-section{
+    width: 90%;
+    padding: 20px;
+}
+.skills-box{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    line-height: 1.2;
+}
+.progress {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  margin-bottom: 10px;
+}
+.progress-bar {
+  position: absolute;
+  width: 1%;
+  height: 100%;
+  font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+  background-color: #428bca;
+}
+
+.education-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.education-section .edu-exp{
+    width: 60%;
+    padding: 30px;
+    font-size: 20px;
+    line-height: 1.2;
+}
+.education-section .certificate-container{
+    padding: 25px;
+    line-height: 1.2;
+}
+.certificate-container .cert-info{
+    padding: 5px;
+    margin-top: 5px;
+}
+.cert-info h5{
+    font-size: 20px;
+}
+.certificate-container img{
+    width: 100%;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #111;
+    color: #818181;
+     text-align: center;
+}
+.footer a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+text-align: center;
+color: #818181;
+display: inline-block;
+transition: 0.3s;
+}
+
+/*contact */
+.contact{
+    width: 70%;
+    text-align: center;
+    padding-top: 80px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+.contact-container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.title{
+    color: #303030;
+    font-size: 60px;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+}
+.form-container{
+    width: 83.333%;
+}
+.form-control {
+    background: transparent;
+    border: 1px solid #666;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-bottom: 10px;
+    transition: all 0.6s ease-in;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+}
+
+
+@media screen and (max-width: 500px) {
+    .navbar{
+display: none;
+}
+.education-section{
+    display: inline-block;
+}
+ .footer{
+     display: block;
+ }
+ .title{
+     font-size: 40px;
+ }
+
+}
+@media screen and (min-width: 700px) {
+#main{
+    display: none;
+}
+}
+
+ 
+</style>
+<body>
+    
+        <header class="header-section">
+        <div id="navbar" class="navbar">
+            <a href="#" class="jblogo"><span>J</span>B</a>
+            <div class="ul">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">About</a>
+            <a href="about.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </div>
+          </div>
+    
+    <div id="mySidenav" class="sidenav">
+     
+      <a href="index.html" class="home">Home</a>
+      <a href="portfolio.html">About</a>
+      <a href="about.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+    
+    <div id="main">
+      <span style="font-size:30px;cursor:pointer; margin-left: 10px;" onclick="openNav()">&#9776;</span>
+      <a href="#" class="jblogo"><span>J</span>B</a>
+    </div>
+</header>
+
+    <section id="contact" class="contact">
+		<div class="contact-container">
+			<div class="row">
+				<div class="contact-head">					
+					<h2 class="title">Drop <strong>me a line</strong></h2>
+					<hr>					
+				</div>
+				<div class="form-container"></div>
+				<div class="">
+					<form action="#" method="post">
+						<div class="form-group">
+							<input class="form-control" type="text" placeholder="Your Name">
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="email" placeholder="Your Email">
+						</div>
+						<div class="form-group sm">
+							<input class="form-control" type="text" placeholder="Your Subject">
+							<textarea class="form-control" placeholder="Your Message" rows="6"></textarea>
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="submit" value="SEND MESSAGE">
+						</div>
+					</form>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+    
+
+
+<footer class="footer">
+    <p>copyright &copy;: Tiidelab 2021</p>
+    <div class="social">
+        <p>Find me on social media.</p>
+    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="#" target="_blank"> <i class="fa fa-linkedin"></i></a>
+    </div>
+    
+  </footer>
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.opacity= "rgba(0,0,0,0.2)";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            document.body.style.backgroundColor = "white";
+        }
+        </script>
+    
+</body>
+</html>
